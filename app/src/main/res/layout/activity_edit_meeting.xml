@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mad.corti.trackap.activities.EditMeeting">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- Back and Save -->
+        <LinearLayout
+            android:id="@+id/edit_meeting_tool_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="3dp"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageButton
+                android:id="@+id/edit_meeting_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:tint="@color/colorAccent"
+                android:background="?android:selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/ic_arrow_back_24dp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.56" />
+
+            <Button
+                android:id="@+id/edit_meeting_save"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save_space" />
+
+        </LinearLayout>
+
+        <!-- Set title -->
+        <LinearLayout
+            android:id="@+id/edit_meeting_set_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_meeting_tool_layout">
+
+            <EditText
+                android:id="@+id/edit_meeting_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:background="@android:color/transparent"
+                android:hint="@string/meeting_title_hint"/>
+
+        </LinearLayout>
+
+        <!-- All day meeting -->
+        <LinearLayout
+            android:id="@+id/edit_meeting_all_day_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_meeting_set_title_layout">
+
+            <ImageView
+                android:id="@+id/itemMeeting_start_date_time_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingEnd="10dp"
+                android:paddingStart="0dp"
+                android:tint="@color/blueGrey_600"
+                app:srcCompat="@drawable/ic_access_time_24dp" />
+
+            <Switch
+                android:id="@+id/edit_meeting_all_day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/all_day" />
+
+        </LinearLayout>
+
+        <!-- Start time -->
+        <LinearLayout
+            android:id="@+id/edit_meeting_start_date_time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_meeting_all_day_layout">
+
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/edit_meeting_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="4dp"
+                android:text="@string/fake_date"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/edit_meeting_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="5dp"
+                android:text="@string/fake_time"/>
+
+        </LinearLayout>
+
+        <!-- End time -->
+        <LinearLayout
+            android:id="@+id/edit_meeting_end_date_time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_meeting_start_date_time_layout">
+
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/edit_meeting_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="4dp"
+                android:text="@string/fake_date"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/edit_meeting_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="5dp"
+                android:text="@string/fake_time"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_meeting_end_date_time_layout"/>
+
+        <!-- Meeting location -->
+        <LinearLayout
+            android:id="@+id/edit_meeting_location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_meeting_end_date_time_layout">
+
+            <fragment
+                android:id="@+id/place_autocomplete_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:gravity="center_vertical"
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_meeting_location_layout"/>
+
+        <!-- Add friends -->
+        <LinearLayout
+            android:id="@+id/edit_meeting_add_friends_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_meeting_location_layout">
+
+            <ImageView
+                android:id="@+id/itemMeeting_add_friends_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingEnd="10dp"
+                android:paddingStart="0dp"
+                android:tint="@color/blueGrey_600"
+                app:srcCompat="@drawable/ic_people_24dp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/edit_meeting_add_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/meeting_add_friends_hint"
+                android:ems="10"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/edit_meeting_friends_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@+id/edit_meeting_add_friends_layout" />
+
+    </LinearLayout>
+
+</ScrollView>

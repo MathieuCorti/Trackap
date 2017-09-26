@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:paddingStart="@dimen/friend_list_item_padding_start"
+    android:paddingEnd="@dimen/friend_list_item_padding_end"
+    android:paddingTop="@dimen/friend_list_item_padding_top"
+    android:paddingBottom="@dimen/friend_list_item_padding_bottom"
+    android:clickable="true"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_picture"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/friend_list_item_picture_margin"
+        android:src="@drawable/ic_person_24dp"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#FF000000"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:textColor="@color/title"
+        android:textSize="@dimen/friend_list_item_name_font_size"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/profile_picture" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_below="@id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/profile_picture" />
+
+</RelativeLayout>

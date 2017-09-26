@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mad.corti.trackap.activities.Trackap">
+
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_sort_24dp"
+        android:orderInCategory="100"
+        android:title="@string/sort"
+        app:showAsAction="ifRoom"/>
+
+    <!--<item-->
+        <!--android:id="@+id/action_settings"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/settings"-->
+        <!--app:showAsAction="never" />-->
+
+</menu>
