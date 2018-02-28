@@ -1,5 +1,5 @@
 # Trackap
-School project to meet friends in your area.
+Android - Java - School project to meet friends in your area.
 
 ## Your meetings
 ![Meetings screen](screenshots/Screenshot_meetings.png)
